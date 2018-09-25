@@ -29,8 +29,8 @@ std::size_t diffways(std::size_t staircase, std::vector<std::size_t> moves)
                 result += previousResults[move - 1];
             }
         }
-        previousResults.push_front(result);
         previousResults.pop_back();
+        previousResults.push_front(result);
     }
 
     return previousResults[0];
